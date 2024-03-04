@@ -96,7 +96,7 @@ fun TaskBottomBar(onEvent: (TaskEvent) -> Unit) {
             .fillMaxWidth()
             .padding(16.dp)
     ) {
-        FloatingActionButton(onClick = {}) {
+        FloatingActionButton(onClick = { onEvent(TaskEvent.AddTask)}) {
             Icon(imageVector = Icons.Default.Add, contentDescription = "add task")
         }
     }
