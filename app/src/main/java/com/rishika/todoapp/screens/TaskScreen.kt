@@ -82,7 +82,9 @@ fun TaskItem(task: Task, onEvent: (TaskEvent) -> Unit) {
                     }
                 }
             }
-            Checkbox(checked = task.isCompleted, onCheckedChange = {})
+            Checkbox(checked = task.isCompleted, onCheckedChange = {
+                onEvent(TaskEvent.UpdateTask(!task.isCompleted))
+            })
         }
 
     }
