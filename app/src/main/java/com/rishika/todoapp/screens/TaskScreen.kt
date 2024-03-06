@@ -122,7 +122,7 @@ fun TaskBottomBar(onEvent: (TaskEvent) -> Unit) {
             .padding(16.dp)
     ) {
         //handle sheet visibility
-        FloatingActionButton(onClick = { onEvent(TaskEvent.AddTask)}) {
+        FloatingActionButton(onClick = { onEvent(TaskEvent.ToggleSheet)}) {
             Icon(imageVector = Icons.Default.Add, contentDescription = "add task")
         }
     }
